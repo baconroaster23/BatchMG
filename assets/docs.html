@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Documentation — BatchManager</title>
+  <meta name="description" content="Learn how to install packages, create your own, and build plugins for BatchManager." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="docs.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="prompt">&gt;_</span>BatchManager</a>
+      <div class="nav-links">
+        <a class="nav-link" href="https://github.com/baconroaster23/BatchManager" target="_blank" rel="noopener">GitHub</a>
+        <a class="nav-link" href="docs.html">Documentation</a>
+        <a class="nav-link cta" href="https://github.com/baconroaster23/install" download>Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="docs-wrap">
+    <h1>Documentation</h1>
+    <p style="color:var(--muted)">Everything you need to install packages, publish your own, and extend BatchManager with plugins.</p>
+
+    <h2>Installing Packages</h2>
+    <p>
+      BatchManager downloads package definitions from an online repository.
+      When you run <code>BatchManger.bat</code>, it syncs the latest package list,
+      locates the definition file for that package, and opens the official download page
+      so you can grab the installer directly from its source. Metadata is then stored
+      locally so BatchManager knows what's installed.
+    </p>
+    <pre><code>            -- BatchManager -- By BaconRoaster
+
+[1] Install Package
+[2] Remove Package
+[3] Search Packages
+[4] Installed Packages
+[5] Launch Package
+[6] Update Packages
+[7] Plugins
+[8] Settings
+[9] About
+
+[0] Exit
+
+Select an option:</code></pre>
+
+    <h2>Creating Packages</h2>
+    <p>
+      Anyone can create a package. A package definition is a plain text file with
+      key–value pairs describing the software and where users can download it.
+    </p>
+    <pre><code>Name=Git
+ID=git
+Version=2.51
+Author=Git Project
+Description=Distributed Version Control
+Homepage=https://git-scm.com
+DownloadPage=https://git-scm.com/download</code></pre>
+    <p>
+      Save the file as <code>&lt;id&gt;.ini</code>, then add the package ID on its own line
+      inside <code>packages.txt</code> so BatchManager knows the package exists. Finally,
+      push both files to the repository.
+    </p>
+    <a class="repo-btn" href="https://github.com/baconroaster23/batchpkgsini" target="_blank" rel="noopener">
+      ↗ Open Package Repository
+    </a>
+
+    <h2>Creating Plugins</h2>
+    <p>
+      To create a plugin, simply place a Batch file inside the <code>plugins/</code> folder.
+      BatchManager automatically detects plugins on startup — there is no installation
+      step and no registration file to edit.
+    </p>
+    <pre><code>plugins/
+  cleanup.bat
+  backup.bat
+  systeminfo.bat</code></pre>
+    <p>
+      Each plugin becomes a first-class command. Delete the file to uninstall it.
+      That's the whole system.
+    </p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      &gt;_ BatchManager · MIT License · © 2026 BaconRoaster23
+    </div>
+  </footer>
+</body>
+</html>

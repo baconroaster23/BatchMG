@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BatchManager — Windows Batch Package Manager</title>
+  <meta name="description" content="A lightweight package manager written entirely in Windows Batch. Install software, manage local packages, and extend with plugins." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="particles"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo"><span class="prompt">&gt;_</span>BatchManager</a>
+      <div class="nav-links">
+        <a class="nav-link" href="https://github.com/baconroaster23/BatchManager" target="_blank" rel="noopener">GitHub</a>
+        <a class="nav-link" href="assets/docs.html">Documentation</a>
+        <a class="nav-link cta" href="https://github.com/baconroaster23/install" download>Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left reveal">
+        <div class="hero-badge"><span class="dot"></span> v1.0 · Pure Windows Batch</div>
+        <h1>Windows Batch<br/><span class="accent">Package Manager</span></h1>
+        <p class="lead">
+          BatchManager is a lightweight package manager written entirely in Windows Batch.
+          Install software from an online repository, manage local packages, and extend
+          functionality through plugins.
+        </p>
+        <div class="btn-row">
+          <a id="download-bat" href="Installer.bat" class="btn btn-primary" download>
+            ↓ Download .bat
+          </a>
+          <a href="https://github.com/baconroaster23/BatchManager" target="_blank" rel="noopener" class="btn btn-secondary">
+            View GitHub
+          </a>
+          <a href="assets/docs.html" class="btn btn-ghost">Documentation →</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="terminal-wrap">
+          <div class="terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots"><span></span><span></span><span></span></div>
+              <div class="terminal-title">Command Prompt — BatchManager</div>
+              <div style="width:52px"></div>
+            </div>
+            <div class="terminal-body" id="term-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Maintainer -->
+  <section id="maintainer">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">// Maintainer</div>
+        <h2>Built by one developer</h2>
+        <p>An independent open-source effort focused on making the Windows command line more useful.</p>
+      </div>
+      <div class="maintainer-card reveal">
+        <img class="avatar" src="https://github.com/baconroaster23.png?size=200" alt="BaconRoaster23 avatar" />
+        <div class="maintainer-info">
+          <h3>BaconRoaster23</h3>
+          <p class="handle">@baconroaster23</p>
+          <p>
+            Creator of BatchManager. Building lightweight open-source utilities
+            written entirely in Windows Batch.
+          </p>
+          <a href="https://github.com/baconroaster23" target="_blank" rel="noopener" class="btn btn-primary">View GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">// How BatchManager Works</div>
+        <h2>From repository to installed</h2>
+        <p>A predictable, transparent flow — no black boxes, no daemons, no dependencies.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">Repository</div>
+        <div class="timeline-arrow">↓</div>
+        <div class="timeline-step">Download package list</div>
+        <div class="timeline-arrow">↓</div>
+        <div class="timeline-step">Find package</div>
+        <div class="timeline-arrow">↓</div>
+        <div class="timeline-step">Download package definition</div>
+        <div class="timeline-arrow">↓</div>
+        <div class="timeline-step">Open official download page</div>
+        <div class="timeline-arrow">↓</div>
+        <div class="timeline-step">Store package locally</div>
+        <div class="timeline-arrow">↓</div>
+        <div class="timeline-step" style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(96,165,250,0.15));border-color:rgba(96,165,250,0.4)">✔ Done</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      &gt;_ BatchManager · MIT License · © 2026 BaconRoaster23
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
